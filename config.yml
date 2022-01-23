@@ -1,0 +1,9 @@
+log_level: debug
+agents:
+- transactions_active_limit: 100000
+  bind: 0.0.0.0:12345
+  protocol: spoa
+  include:
+   - /etc/coraza-server/coraza.conf
+   - /etc/coraza-server/crs-setup.conf
+   - /etc/coraza-server/rules/*.conf
