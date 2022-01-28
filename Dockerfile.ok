@@ -12,6 +12,18 @@ RUN set -e; \
     ./configure-gcc-hardened.sh; \
     make -C src install PREFIX="$pkgdir/usr";
 
+COPY go.mod go.sum main.go src/
+
+RUN cd src; go build 
+
+FROM alpine:3.15.0
+
+RUN apk add --no-cache pcre
+
+COPY --from=0 /usr/lib/libinjection.so /usr/lib
+
+COPY --from=0 /go/src/coraza-server /usr/bin
+
 COPY config.yml /etc/coraza-server/
 
 ARG CORAZA_WAF_VERSION=2.0.0-rc.1
@@ -26,4 +38,4 @@ RUN set -e; \
 
 EXPOSE 12345
 
-CMD ["sleep", "infinity"]
+CMD ["coraza-server"]

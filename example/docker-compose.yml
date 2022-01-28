@@ -1,0 +1,25 @@
+version: '3.8'
+services:
+  whoami1:
+    image: traefik/whoami
+  whoami2:
+    image: traefik/whoami
+  coraza-server1:
+    image: jouve/coraza-server
+    build:
+      context: ..
+    volumes:
+    - ../..:/go/src
+    ports:
+    - 6060:6060
+  #coraza-server2:
+  #  image: jouve/coraza-server
+  #  build:
+  #    context: ..
+  haproxy:
+    image: haproxy:alpine
+    volumes:
+    - ./haproxy:/usr/local/etc/haproxy
+    ports:
+    - 80:80
+    - 8404:8404

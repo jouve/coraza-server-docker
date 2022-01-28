@@ -1,0 +1,17 @@
+File: coraza-server
+Type: inuse_space
+Time: Jan 27, 2022 at 9:44pm (CET)
+Showing nodes accounting for 126.57MB, 97.65% of 129.62MB total
+Dropped 25 nodes (cum <= 0.65MB)
+      flat  flat%   sum%        cum   cum%
+  126.57MB 97.65% 97.65%   126.57MB 97.65%  github.com/cloudflare/ahocorasick.(*Matcher).buildTrie
+         0     0% 97.65%   126.57MB 97.65%  github.com/cloudflare/ahocorasick.NewStringMatcher
+         0     0% 97.65%   125.97MB 97.18%  github.com/jptosso/coraza-waf/v2/operators.(*pmFromFile).Init
+         0     0% 97.65%   127.07MB 98.03%  github.com/jptosso/coraza-waf/v2/seclang.(*Parser).FromFile
+         0     0% 97.65%   127.07MB 98.03%  github.com/jptosso/coraza-waf/v2/seclang.(*Parser).FromString
+         0     0% 97.65%   127.07MB 98.03%  github.com/jptosso/coraza-waf/v2/seclang.(*Parser).evaluate
+         0     0% 97.65%   126.57MB 97.65%  github.com/jptosso/coraza-waf/v2/seclang.(*RuleParser).ParseOperator
+         0     0% 97.65%   127.07MB 98.03%  github.com/jptosso/coraza-waf/v2/seclang.ParseRule
+         0     0% 97.65%   127.07MB 98.03%  github.com/jptosso/coraza-waf/v2/seclang.directiveSecRule
+         0     0% 97.65%   127.07MB 98.03%  main.main
+         0     0% 97.65%   127.62MB 98.46%  runtime.main

@@ -2,6 +2,8 @@ package main
 
 import (
 	"flag"
+	"net/http"
+	_ "net/http/pprof"
 	"sync"
 
 	_ "github.com/jptosso/coraza-libinjection"
@@ -49,6 +51,11 @@ func main() {
 			}
 		}()
 	}
+	wg.Add(1)
+	go func() {
+		defer wg.Done()
+		logrus.Info("%s", http.ListenAndServe(":6060", nil))
+	}()
 	wg.Wait()
 	logrus.Info("Coraza server finished.")
 }

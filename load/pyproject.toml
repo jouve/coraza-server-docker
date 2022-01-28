@@ -1,0 +1,45 @@
+[tool.poetry]
+name = "load"
+version = "0.1.0"
+description = ""
+authors = ["Cyril Jouve <jv.cyril@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+httpx = "^0.21.3"
+
+[tool.poetry.dev-dependencies]
+bandit = "*"
+black = "*"
+flake8-assertive = "*"
+flake8-bugbear = "*"
+flake8-comprehensions = "*"
+isort = "*"
+mypy = "*"
+pylint = "*"
+unify = "*"
+
+[tool.black]
+line-length = 120
+skip-string-normalization = true
+
+[tool.isort]
+profile = "black"
+line_length = 120
+
+[tool.pylint.messages_control]
+disable = """
+    C0330,
+    C0326,
+    invalid-name,
+    missing-function-docstring,
+    missing-class-docstring,
+    missing-module-docstring
+"""
+
+[tool.pylint.format]
+max-line-length = 120
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

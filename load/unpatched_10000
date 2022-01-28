@@ -1,0 +1,47 @@
+File: coraza-server
+Type: inuse_space
+Time: Jan 27, 2022 at 9:48pm (CET)
+Showing nodes accounting for 1621.49MB, 96.92% of 1672.98MB total
+Dropped 103 nodes (cum <= 8.36MB)
+      flat  flat%   sum%        cum   cum%
+  370.45MB 22.14% 22.14%   370.45MB 22.14%  github.com/jptosso/coraza-waf/v2.(*Transaction).RemoveRuleTargetByID (inline)
+  305.65MB 18.27% 40.41%   305.65MB 18.27%  github.com/cloudflare/ahocorasick.(*Matcher).buildTrie
+  248.07MB 14.83% 55.24%   852.06MB 50.93%  github.com/jptosso/coraza-waf/v2.(*Rule).Evaluate
+  182.88MB 10.93% 66.17%   182.88MB 10.93%  github.com/jptosso/coraza-waf/v2.(*Collection).Set (inline)
+  151.85MB  9.08% 75.25%   151.85MB  9.08%  github.com/criteo/haproxy-spoe-go.(*codec).decodeFrame
+  141.04MB  8.43% 83.68%   141.04MB  8.43%  github.com/jptosso/coraza-waf/v2.(*Collection).Reset (inline)
+   69.50MB  4.15% 87.83%    69.50MB  4.15%  github.com/jptosso/coraza-waf/v2.NewCollection (inline)
+   56.02MB  3.35% 91.18%   576.32MB 34.45%  github.com/jptosso/coraza-waf/v2.(*Rule).matchVariable
+   30.51MB  1.82% 93.01%    30.51MB  1.82%  github.com/jptosso/coraza-waf/v2.(*Collection).SetIndex (inline)
+   22.50MB  1.35% 94.35%    22.50MB  1.35%  strings.(*Builder).WriteString (inline)
+   12.01MB  0.72% 95.07%    12.01MB  0.72%  github.com/jptosso/coraza-waf/v2.glob..func1
+   11.50MB  0.69% 95.76%   202.55MB 12.11%  github.com/jptosso/coraza-waf/v2.(*Waf).NewTransaction
+      10MB   0.6% 96.35%    73.33MB  4.38%  github.com/jptosso/coraza-waf/v2/actions.(*setvarFn).evaluateTxCollection
+    5.50MB  0.33% 96.68%   951.59MB 56.88%  github.com/jptosso/coraza-waf/v2.(*RuleGroup).Eval
+    3.50MB  0.21% 96.89%    55.02MB  3.29%  github.com/jptosso/coraza-waf/v2.(*Transaction).matchVariable
+    0.50MB  0.03% 96.92%    31.51MB  1.88%  github.com/jptosso/coraza-waf/v2.(*Transaction).ProcessURI
+         0     0% 96.92%   305.65MB 18.27%  github.com/cloudflare/ahocorasick.NewStringMatcher
+         0     0% 96.92%   151.85MB  9.08%  github.com/criteo/haproxy-spoe-go.(*Agent).Serve.func1
+         0     0% 96.92%  1204.91MB 72.02%  github.com/criteo/haproxy-spoe-go.(*conn).handleNotify
+         0     0% 96.92%   151.85MB  9.08%  github.com/criteo/haproxy-spoe-go.(*conn).run
+         0     0% 96.92%  1205.41MB 72.05%  github.com/criteo/haproxy-spoe-go.(*conn).runWorker
+         0     0% 96.92%    11.50MB  0.69%  github.com/jptosso/coraza-pcre.(*rx).Evaluate
+         0     0% 96.92%  1204.91MB 72.02%  github.com/jptosso/coraza-server/protocols/spoa.(*SPOA).Start.func1
+         0     0% 96.92%  1204.91MB 72.02%  github.com/jptosso/coraza-server/protocols/spoa.(*SPOA).processRequest
+         0     0% 96.92%       22MB  1.32%  github.com/jptosso/coraza-waf/v2.(*Macro).Expand
+         0     0% 96.92%    15.67MB  0.94%  github.com/jptosso/coraza-waf/v2.(*Rule).executeOperator
+         0     0% 96.92%    10.50MB  0.63%  github.com/jptosso/coraza-waf/v2.(*Transaction).ProcessConnection
+         0     0% 96.92%   343.26MB 20.52%  github.com/jptosso/coraza-waf/v2.(*Transaction).ProcessRequestBody
+         0     0% 96.92%   608.33MB 36.36%  github.com/jptosso/coraza-waf/v2.(*Transaction).ProcessRequestHeaders (inline)
+         0     0% 96.92%   370.95MB 22.17%  github.com/jptosso/coraza-waf/v2/actions.(*ctlFn).Evaluate
+         0     0% 96.92%    94.34MB  5.64%  github.com/jptosso/coraza-waf/v2/actions.(*setvarFn).Evaluate
+         0     0% 96.92%   305.65MB 18.27%  github.com/jptosso/coraza-waf/v2/operators.(*pmFromFile).Init
+         0     0% 96.92%   308.17MB 18.42%  github.com/jptosso/coraza-waf/v2/seclang.(*Parser).FromFile
+         0     0% 96.92%   308.17MB 18.42%  github.com/jptosso/coraza-waf/v2/seclang.(*Parser).FromString
+         0     0% 96.92%   308.17MB 18.42%  github.com/jptosso/coraza-waf/v2/seclang.(*Parser).evaluate
+         0     0% 96.92%   306.16MB 18.30%  github.com/jptosso/coraza-waf/v2/seclang.(*RuleParser).ParseOperator
+         0     0% 96.92%   308.17MB 18.42%  github.com/jptosso/coraza-waf/v2/seclang.ParseRule
+         0     0% 96.92%   308.17MB 18.42%  github.com/jptosso/coraza-waf/v2/seclang.directiveSecRule
+         0     0% 96.92%   308.17MB 18.42%  main.main
+         0     0% 96.92%   308.67MB 18.45%  runtime.main
+         0     0% 96.92%    12.01MB  0.72%  sync.(*Pool).Get

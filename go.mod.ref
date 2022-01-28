@@ -10,9 +10,7 @@ require (
 	github.com/sirupsen/logrus v1.8.1
 )
 
-replace github.com/jptosso/coraza-waf/v2 v2.0.0-rc.1 => ../jptosso/coraza-waf
-
-replace github.com/jptosso/coraza-server v0.0.0-20220112132803-976df69411c9 => ../jptosso/coraza-server
+//replace github.com/jptosso/coraza-waf/v2 v2.0.0-rc.1 => ../coraza-waf
 
 require (
 	github.com/ReneKroon/ttlcache/v2 v2.8.1 // indirect
